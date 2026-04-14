@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panduan Admin – CV. Stephen Engineering Mandiri Website</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#0a1628;--navy-light:#122040;--steel:#1e3a5f;--gold:#c8960c;--gold-light:#f0b429;--white:#f8f9fa;--gray:#8a9ab0;--gray-light:#e8ecf2;--green:#1a7a4a;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
+    .nav-logo .sem-badge{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:var(--navy);}
+    .nav-logo span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;line-height:1.2;}
+    .nav-logo small{display:block;font-size:.65rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}
+    .nav-links{display:flex;gap:.25rem;align-items:center;}
+    .nav-links a{color:var(--gray);text-decoration:none;font-size:.82rem;font-weight:500;padding:.4rem .75rem;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap;}
+    .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+    .nav-cta{background:var(--gold);color:var(--navy)!important;font-weight:700!important;border-radius:6px!important;padding:.45rem 1rem!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:#fff;}
+    @media(max-width:860px){.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy-light);flex-direction:column;padding:1rem;border-bottom:2px solid var(--gold);}.nav-links.open{display:flex;}.hamburger{display:flex;}}
+
+    .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--steel) 100%);padding:8rem 2rem 4rem;text-align:center;}
+    .page-hero .breadcrumb{color:var(--gray);font-size:.82rem;margin-bottom:1rem;}
+    .page-hero .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;color:#fff;margin-bottom:.75rem;}
+    .page-hero p{color:var(--gray);font-size:1rem;max-width:560px;margin:0 auto;}
+    .admin-badge{display:inline-block;background:rgba(200,150,12,.2);border:1px solid var(--gold);color:var(--gold-light);font-size:.75rem;font-weight:700;padding:.35rem 1rem;border-radius:20px;margin-bottom:1rem;letter-spacing:1px;}
+
+    section{padding:4rem 2rem;}
+    .container{max-width:900px;margin:0 auto;}
+
+    /* TOC */
+    .toc{background:#fff;border:1px solid var(--gray-light);border-radius:12px;padding:1.75rem;margin-bottom:3rem;}
+    .toc h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:1rem;}
+    .toc ol{padding-left:1.25rem;}
+    .toc li{margin-bottom:.5rem;}
+    .toc a{color:var(--steel);text-decoration:none;font-size:.9rem;font-weight:500;}
+    .toc a:hover{color:var(--gold);}
+
+    /* GUIDE SECTIONS */
+    .guide-section{margin-bottom:3.5rem;}
+    .guide-section h2{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--gray-light);}
+    .guide-section h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.5rem 0 .6rem;}
+    .guide-section p{font-size:.9rem;color:#4a5a70;line-height:1.75;margin-bottom:.75rem;}
+    .guide-section ul,.guide-section ol{padding-left:1.25rem;margin-bottom:.75rem;}
+    .guide-section li{font-size:.9rem;color:#4a5a70;line-height:1.7;margin-bottom:.35rem;}
+    code{font-family:'JetBrains Mono',monospace;background:var(--gray-light);padding:.1rem .4rem;border-radius:4px;font-size:.82rem;color:var(--navy);}
+    .code-block{background:var(--navy);border-radius:10px;padding:1.25rem 1.5rem;margin:1rem 0;overflow-x:auto;}
+    .code-block pre{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:#a8d8a8;line-height:1.6;white-space:pre-wrap;word-break:break-all;}
+    .code-block .comment{color:var(--gray);}
+    .step-card{background:#fff;border:1px solid var(--gray-light);border-left:4px solid var(--gold);border-radius:8px;padding:1.25rem;margin:.75rem 0;}
+    .step-card h4{font-weight:700;color:var(--navy);margin-bottom:.4rem;font-size:.95rem;}
+    .step-card p{font-size:.87rem;color:#5a6a70;line-height:1.65;}
+    .alert{border-radius:8px;padding:1rem 1.25rem;margin:1rem 0;font-size:.87rem;line-height:1.65;}
+    .alert-warning{background:#fff8e6;border:1px solid #f0b429;color:#7a5500;}
+    .alert-info{background:#e8f0fe;border:1px solid #4a90d9;color:#1a3a6a;}
+    .alert-success{background:#e8f8ec;border:1px solid #2da052;color:#1a5a30;}
+    .sheet-formula{background:var(--navy-light);border-radius:8px;padding:1rem 1.25rem;margin:.75rem 0;}
+    .sheet-formula code{background:transparent;color:#f0b429;font-size:.85rem;}
+
+    footer{background:var(--navy);border-top:3px solid var(--gold);padding:2.5rem 2rem 1.5rem;}
+    .footer-bottom{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;font-size:.78rem;color:var(--gray);flex-wrap:wrap;gap:.5rem;}
+    .footer-bottom a{color:var(--gray);text-decoration:none;}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="sem-badge">SEM</div>
+    <span>Stephen Engineering<small>Mandiri</small></span>
+  </a>
+  <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="jasa-pks.html">Jasa PKS</a>
+    <a href="katalog-spareparts.html">Spare Parts</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="kontak.html" class="nav-cta">📋 Minta Penawaran</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="admin-badge">🔐 HALAMAN ADMIN</span>
+  <p class="breadcrumb"><a href="index.html">Beranda</a> / Panduan Admin</p>
+  <h1>Panduan Pengelolaan Website</h1>
+  <p>Panduan lengkap untuk mengelola konten website, menambah produk, dan memantau leads masuk.</p>
+</div>
+
+<section>
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 Daftar Isi Panduan</h3>
+    <ol>
+      <li><a href="#bagian1">Upload & Deploy ke GitHub Pages</a></li>
+      <li><a href="#bagian2">Cara Mengedit Konten Website</a></li>
+      <li><a href="#bagian3">Cara Menambah Produk Baru di Katalog</a></li>
+      <li><a href="#bagian4">Setup Webhook Make.com (Otomatisasi Leads)</a></li>
+      <li><a href="#bagian5">Google Sheets CRM — Formula Otomatis</a></li>
+      <li><a href="#bagian6">Koneksi WhatsApp Notifikasi</a></li>
+    </ol>
+  </div>
+
+  <!-- BAGIAN 1 -->
+  <div class="guide-section" id="bagian1">
+    <h2>1. Upload & Deploy ke GitHub Pages (Hosting Gratis)</h2>
+    <p>Website ini terdiri dari 5 file HTML + 1 file panduan ini. Semua dapat di-host GRATIS di GitHub Pages.</p>
+    <div class="step-card"><h4>Langkah 1: Buat Akun GitHub</h4><p>Buka <strong>github.com</strong> → Klik "Sign up" → Daftarkan email Bapak/Ibu. Nama username akan menjadi bagian URL website.</p></div>
+    <div class="step-card"><h4>Langkah 2: Buat Repository Baru</h4><p>Setelah login → Klik tombol hijau "New" → Isi nama repository, contoh: <code>sem-website</code> → Centang "Public" → Klik "Create repository".</p></div>
+    <div class="step-card"><h4>Langkah 3: Upload Semua File HTML</h4><p>Di halaman repository → Klik "uploading an existing file" → Drag & drop semua file HTML (index.html, tentang.html, jasa-pks.html, katalog-spareparts.html, kontak.html, panduan.html) → Klik "Commit changes".</p></div>
+    <div class="step-card"><h4>Langkah 4: Aktifkan GitHub Pages</h4><p>Klik tab "Settings" → Scroll ke bagian "Pages" → Di "Source" pilih "Deploy from a branch" → Branch: "main" → Folder: "/(root)" → Klik "Save".</p></div>
+    <div class="step-card"><h4>Langkah 5: Akses Website</h4><p>Tunggu 2-5 menit → URL website akan menjadi: <code>https://[username-github].github.io/sem-website/</code></p></div>
+    <div class="alert alert-success">✅ Website sudah LIVE dan bisa diakses dari Google! File index.html adalah halaman beranda otomatis.</div>
+  </div>
+
+  <!-- BAGIAN 2 -->
+  <div class="guide-section" id="bagian2">
+    <h2>2. Cara Mengedit Konten Website</h2>
+    <p>Ada 2 cara mengedit file HTML — langsung di GitHub (mudah) atau via VS Code (lebih lengkap).</p>
+    <h3>Cara A: Edit Langsung di GitHub (Direkomendasikan untuk perubahan kecil)</h3>
+    <ol>
+      <li>Buka repository di github.com</li>
+      <li>Klik file yang ingin diedit (misal: <code>index.html</code>)</li>
+      <li>Klik ikon pensil ✏️ di kanan atas file</li>
+      <li>Edit teks yang diinginkan langsung di browser</li>
+      <li>Scroll ke bawah → Klik "Commit changes" → Save</li>
+      <li>Website otomatis terupdate dalam 1-2 menit</li>
+    </ol>
+    <h3>Cara B: Edit via VS Code (untuk perubahan besar)</h3>
+    <ol>
+      <li>Download file dari GitHub → Edit di VS Code</li>
+      <li>Temukan teks yang ingin diganti dengan Ctrl+F</li>
+      <li>Edit → Save → Upload kembali ke GitHub</li>
+    </ol>
+    <div class="alert alert-warning">⚠️ Jangan hapus tag HTML seperti <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, atau <code>&lt;/&gt;</code>. Hanya edit teks di antara tag tersebut.</div>
+    <h3>Contoh: Mengganti Nomor WhatsApp</h3>
+    <p>Cari teks <code>6281378293498</code> di semua file (Ctrl+F), ganti dengan nomor baru. Nomor harus diawali <code>62</code> (kode negara Indonesia, tanpa tanda +).</p>
+  </div>
+
+  <!-- BAGIAN 3 -->
+  <div class="guide-section" id="bagian3">
+    <h2>3. Cara Menambah Produk Baru di Katalog</h2>
+    <p>Buka file <code>katalog-spareparts.html</code>. Temukan bagian kategori yang sesuai, lalu copy-paste template kartu produk berikut:</p>
+    <div class="code-block">
+<pre><span class="comment">&lt;!-- COPY BLOCK INI UNTUK PRODUK BARU --&gt;</span>
+&lt;div class="prod-card"&gt;
+  &lt;h4&gt;<span style="color:#ffd700">NAMA PRODUK ANDA</span>&lt;/h4&gt;
+  &lt;div class="prod-items"&gt;
+    &lt;span class="prod-item"&gt;<span style="color:#ffd700">Item / Spesifikasi 1</span>&lt;/span&gt;
+    &lt;span class="prod-item"&gt;<span style="color:#ffd700">Item / Spesifikasi 2</span>&lt;/span&gt;
+    &lt;span class="prod-item"&gt;<span style="color:#ffd700">Item / Spesifikasi 3</span>&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="prod-btns"&gt;
+    &lt;button class="prod-rfq" 
+      onclick="openModal('<span style="color:#ffd700">NAMA PRODUK ANDA</span>')"&gt;
+      📋 Tanya Harga
+    &lt;/button&gt;
+    &lt;a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20<span style="color:#ffd700">NAMA+PRODUK</span>." 
+      target="_blank" class="prod-wa"&gt;💬 WA&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+    <div class="alert alert-info">💡 Ganti semua teks berwarna kuning dengan nama dan detail produk Bapak/Ibu. Untuk URL WhatsApp, ganti spasi dengan <code>%20</code>.</div>
+  </div>
+
+  <!-- BAGIAN 4 -->
+  <div class="guide-section" id="bagian4">
+    <h2>4. Setup Webhook Make.com (Otomatisasi Leads)</h2>
+    <p>Ini adalah sistem yang membuat data dari form website otomatis masuk ke Google Sheets dan mengirim notifikasi ke HP Owner. Gratis!</p>
+    <div class="step-card"><h4>Langkah 1: Daftar Make.com</h4><p>Buka <strong>make.com</strong> → Sign up gratis dengan email → Paket Free sudah cukup untuk 1.000 operasi/bulan.</p></div>
+    <div class="step-card"><h4>Langkah 2: Buat Scenario Baru</h4><p>Klik "Create a new scenario" → Tambahkan modul pertama: cari "Webhooks" → Pilih "Custom webhook" → Klik "Add" → Copy URL Webhook yang dihasilkan.</p></div>
+    <div class="step-card"><h4>Langkah 3: Pasang Webhook URL di Semua File HTML</h4><p>Di setiap file HTML (index.html, jasa-pks.html, katalog-spareparts.html, kontak.html), cari teks <code>YOUR_WEBHOOK_ID</code> dan ganti dengan URL webhook Make.com Anda.</p></div>
+    <div class="code-block">
+<pre><span class="comment">// Cari baris ini di setiap file HTML:</span>
+const WEBHOOK = 'https://hook.eu1.make.com/<span style="color:#ffd700">YOUR_WEBHOOK_ID</span>';
+
+<span class="comment">// Ganti dengan URL webhook Anda, contoh:</span>
+const WEBHOOK = 'https://hook.eu1.make.com/abc123def456ghi789';</pre>
+    </div>
+    <div class="step-card"><h4>Langkah 4: Tambahkan Modul Google Sheets</h4><p>Di Make.com → Klik "+" → Cari "Google Sheets" → Pilih "Add a Row" → Hubungkan akun Google Anda → Pilih spreadsheet CRM Anda → Mapping: nama→A, hp→B, kebutuhan→C, dst.</p></div>
+    <div class="step-card"><h4>Langkah 5: Aktifkan Scenario</h4><p>Klik toggle "ON" di kiri bawah Make.com → Scenario sekarang aktif dan akan berjalan setiap ada form yang diisi.</p></div>
+  </div>
+
+  <!-- BAGIAN 5 -->
+  <div class="guide-section" id="bagian5">
+    <h2>5. Google Sheets CRM — Formula Otomatis</h2>
+    <p>Buat Google Sheets baru sebagai CRM. Gunakan formula di bawah untuk membantu analisis leads.</p>
+    <h3>Struktur Kolom yang Disarankan:</h3>
+    <p>A: Waktu · B: Nama · C: Perusahaan · D: HP · E: Jenis Kebutuhan · F: Urgensi · G: Detail · H: Halaman · I: Status · J: Prioritas (auto)</p>
+    <h3>Formula: Flag URGENT + Governor Woodward (Kolom J)</h3>
+    <div class="sheet-formula">
+      <code>=IF(AND(ISNUMBER(SEARCH("URGENT",F2)),ISNUMBER(SEARCH("Governor",E2))),"🔴 HIGH PRIORITY",IF(ISNUMBER(SEARCH("URGENT",F2)),"🟡 URGENT",IF(ISNUMBER(SEARCH("Governor",E2)),"🔵 WOODWARD","🟢 Normal")))</code>
+    </div>
+    <h3>Formula: Hitung Total Leads per Bulan</h3>
+    <div class="sheet-formula">
+      <code>=COUNTIFS(A:A,">="&DATE(YEAR(TODAY()),MONTH(TODAY()),1),A:A,"<"&DATE(YEAR(TODAY()),MONTH(TODAY())+1,1))</code>
+    </div>
+    <h3>Formula: Hitung Leads Governor Woodward</h3>
+    <div class="sheet-formula">
+      <code>=COUNTIF(E:E,"*Governor*")</code>
+    </div>
+    <div class="alert alert-success">✅ Tempel formula di baris pertama kolom J, lalu drag ke bawah untuk semua baris. Status otomatis ter-update saat data baru masuk.</div>
+  </div>
+
+  <!-- BAGIAN 6 -->
+  <div class="guide-section" id="bagian6">
+    <h2>6. Koneksi WhatsApp Notifikasi ke Owner</h2>
+    <p>Saat ini, form website otomatis membuka WhatsApp dengan pesan pre-filled untuk dikirim ke Owner. Untuk notifikasi otomatis tanpa klik, gunakan cara berikut di Make.com:</p>
+    <div class="step-card"><h4>Opsi A: Notifikasi via Email (Gratis)</h4><p>Di Make.com → Tambahkan modul "Email" → Kirim ke email owner setiap ada lead masuk. Subject: "[LEAD BARU] {{nama}} - {{kebutuhan}}"</p></div>
+    <div class="step-card"><h4>Opsi B: Notifikasi via Telegram Bot (Gratis)</h4><p>Buat Telegram Bot via @BotFather → Tambahkan modul "Telegram Bot" di Make.com → Kirim pesan ke nomor HP owner setiap ada form terisi. Ini adalah cara paling cepat.</p></div>
+    <div class="step-card"><h4>Opsi C: WhatsApp via Twilio/WATI (Berbayar)</h4><p>Untuk notifikasi WhatsApp otomatis 100%, gunakan layanan WATI.io atau Twilio WhatsApp API. Hubungkan ke Make.com dengan API key.</p></div>
+    <div class="alert alert-info">💡 Rekomendasi: Mulai dengan Telegram Bot (gratis, instan) sambil sistem berjalan. Upgrade ke WhatsApp API saat volume leads sudah tinggi.</div>
+  </div>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2024 CV. Stephen Engineering Mandiri — Panduan Internal Admin</span>
+    <a href="index.html">← Kembali ke Website</a>
+  </div>
+</footer>
+</body>
+</html>

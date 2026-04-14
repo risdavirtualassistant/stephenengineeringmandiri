@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV. Stephen Engineering Mandiri – Solusi Teknik PKS & Industri Balikpapan</title>
+  <meta name="description" content="Jasa Teknik PKS Balikpapan, Supplier Spare Parts Sawit, Electrical Contractor. CV. Stephen Engineering Mandiri – mitra terpercaya industri kelapa sawit Kalimantan."/>
+  <meta name="keywords" content="Jasa Teknik PKS Balikpapan, Supplier Spare Parts Sawit, Logistik Kargo Sawit Kalimantan, Electrical Contractor PKS"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-light: #122040;
+      --steel: #1e3a5f;
+      --gold: #c8960c;
+      --gold-light: #f0b429;
+      --orange: #e05c1a;
+      --white: #f8f9fa;
+      --gray: #8a9ab0;
+      --gray-light: #e8ecf2;
+      --green: #1a7a4a;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top:0; left:0; right:0; z-index:999;
+      background: var(--navy);
+      border-bottom: 3px solid var(--gold);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      height: 64px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:.75rem; text-decoration:none; }
+    .nav-logo .sem-badge {
+      width:40px; height:40px; background: var(--gold);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1rem;
+      color: var(--navy); letter-spacing:-.5px;
+    }
+    .nav-logo span {
+      font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1.1rem;
+      color:#fff; letter-spacing:.5px; line-height:1.2;
+    }
+    .nav-logo small { display:block; font-size:.65rem; font-weight:400; color:var(--gray); letter-spacing:1px; text-transform:uppercase; }
+    .nav-links { display:flex; gap:.25rem; align-items:center; }
+    .nav-links a {
+      color: var(--gray); text-decoration:none;
+      font-size:.82rem; font-weight:500; letter-spacing:.3px;
+      padding:.4rem .75rem; border-radius:4px;
+      transition: color .2s, background .2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active { color:#fff; background: rgba(255,255,255,.08); }
+    .nav-links a.active { color: var(--gold-light); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy) !important;
+      font-weight:700 !important; border-radius:6px !important;
+      padding:.45rem 1rem !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:.5rem; }
+    .hamburger span { display:block; width:22px; height:2px; background:#fff; transition:.3s; }
+
+    @media(max-width:860px){
+      .nav-links { display:none; position:absolute; top:64px; left:0; right:0;
+        background:var(--navy-light); flex-direction:column; padding:1rem;
+        border-bottom:2px solid var(--gold);
+      }
+      .nav-links.open { display:flex; }
+      .hamburger { display:flex; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--steel) 60%, #0d2d4a 100%);
+      display: flex; flex-direction:column; justify-content:center;
+      padding: 7rem 2rem 4rem;
+      position: relative; overflow:hidden;
+    }
+    .hero::before {
+      content:'';
+      position:absolute; inset:0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    .hero-inner { max-width:1200px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; position:relative; }
+    .hero-tag {
+      display:inline-block;
+      background: rgba(200,150,12,.15); border:1px solid var(--gold);
+      color: var(--gold-light); font-size:.75rem; font-weight:600;
+      letter-spacing:2px; text-transform:uppercase;
+      padding:.4rem 1rem; border-radius:4px; margin-bottom:1.5rem;
+    }
+    .hero h1 {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight:800; color:#fff; line-height:1.05;
+      margin-bottom:1.25rem;
+    }
+    .hero h1 .accent { color: var(--gold-light); }
+    .hero p {
+      font-size:1.05rem; color: var(--gray); line-height:1.7;
+      margin-bottom:2rem; max-width:520px;
+    }
+    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      font-weight:700; font-size:.95rem;
+      padding:.85rem 2rem; border-radius:8px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+      transition: transform .2s, box-shadow .2s;
+      border:none; cursor:pointer; font-family:inherit;
+    }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(200,150,12,.4); }
+    .btn-outline {
+      border:2px solid rgba(255,255,255,.3); color:#fff;
+      font-weight:600; font-size:.95rem;
+      padding:.85rem 2rem; border-radius:8px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,.05); }
+
+    /* RFQ FORM in hero */
+    .hero-rfq {
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(12px);
+      border-radius:16px; padding:2rem;
+    }
+    .hero-rfq h3 {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:1.4rem; font-weight:700; color:#fff;
+      margin-bottom:.5rem;
+    }
+    .hero-rfq p { font-size:.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .rfq-form { display:flex; flex-direction:column; gap:.85rem; }
+    .rfq-form input, .rfq-form select, .rfq-form textarea {
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.15);
+      color:#fff; border-radius:8px;
+      padding:.75rem 1rem; font-family:inherit; font-size:.9rem;
+      transition: border-color .2s;
+      width:100%;
+    }
+    .rfq-form input::placeholder, .rfq-form textarea::placeholder { color:rgba(255,255,255,.4); }
+    .rfq-form input:focus, .rfq-form select:focus, .rfq-form textarea:focus {
+      outline:none; border-color: var(--gold);
+    }
+    .rfq-form select option { background:var(--navy-light); color:#fff; }
+    .rfq-form textarea { resize:vertical; min-height:80px; }
+    .rfq-submit {
+      background: var(--gold); color: var(--navy);
+      font-weight:700; font-size:1rem;
+      padding:.85rem; border-radius:8px; border:none;
+      cursor:pointer; font-family:inherit;
+      transition: transform .2s, box-shadow .2s;
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+    }
+    .rfq-submit:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(200,150,12,.35); }
+    .rfq-or { text-align:center; color:var(--gray); font-size:.8rem; margin-top:.5rem; }
+    .rfq-wa {
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+      background: var(--green); color:#fff;
+      font-weight:600; font-size:.9rem;
+      padding:.75rem; border-radius:8px; text-decoration:none;
+      transition: opacity .2s;
+      margin-top:.25rem;
+    }
+    .rfq-wa:hover { opacity:.85; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--navy-light);
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:3px solid var(--gold);
+      padding:1.5rem 2rem;
+    }
+    .stats-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
+    .stat-item {}
+    .stat-num { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:800; color:var(--gold-light); }
+    .stat-label { font-size:.78rem; color:var(--gray); text-transform:uppercase; letter-spacing:1px; margin-top:.2rem; }
+
+    /* ── SECTION GENERIC ── */
+    section { padding:5rem 2rem; }
+    .container { max-width:1200px; margin:0 auto; }
+    .section-tag {
+      font-size:.72rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+      color: var(--gold); margin-bottom:.75rem; display:block;
+    }
+    .section-title {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight:800; color: var(--navy); line-height:1.1;
+      margin-bottom:1rem;
+    }
+    .section-sub { font-size:1rem; color:#5a6a80; line-height:1.7; max-width:600px; margin-bottom:3rem; }
+
+    /* ── SERVICE CARDS ── */
+    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .service-card {
+      border:1px solid var(--gray-light);
+      border-radius:12px; padding:2rem;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      position:relative; overflow:hidden;
+    }
+    .service-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background: var(--gold); transform:scaleX(0); transform-origin:left;
+      transition: transform .3s;
+    }
+    .service-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,.1); border-color:var(--gold); }
+    .service-card:hover::before { transform:scaleX(1); }
+    .service-icon { font-size:2.5rem; margin-bottom:1rem; }
+    .service-card h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:.75rem; color:var(--navy); }
+    .service-card p { font-size:.88rem; color:#5a6a80; line-height:1.65; margin-bottom:1.25rem; }
+    .service-link {
+      font-size:.85rem; font-weight:600; color:var(--gold);
+      text-decoration:none; display:inline-flex; align-items:center; gap:.35rem;
+      transition: gap .2s;
+    }
+    .service-link:hover { gap:.6rem; }
+
+    /* ── WHY US ── */
+    .why-section { background: var(--navy); }
+    .why-section .section-title { color:#fff; }
+    .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .why-card {
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px; padding:1.75rem;
+      display:flex; gap:1rem; align-items:flex-start;
+    }
+    .why-num {
+      font-family:'Barlow Condensed',sans-serif; font-size:2.5rem; font-weight:800;
+      color: rgba(200,150,12,.3); line-height:1; flex-shrink:0;
+    }
+    .why-card h4 { font-weight:700; color:#fff; margin-bottom:.4rem; }
+    .why-card p { font-size:.87rem; color:var(--gray); line-height:1.65; }
+
+    /* ── PRODUCTS PREVIEW ── */
+    .products-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .product-card {
+      border:1px solid var(--gray-light); border-radius:10px;
+      padding:1.25rem; text-align:center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .product-card:hover { transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,.08); }
+    .product-card .prod-icon { font-size:2rem; margin-bottom:.75rem; }
+    .product-card h4 { font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; }
+    .product-card p { font-size:.78rem; color:#5a6a80; line-height:1.5; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--gold) 0%, #e8a80a 100%);
+      padding:4rem 2rem; text-align:center;
+    }
+    .cta-banner h2 { font-family:'Barlow Condensed',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:var(--navy); margin-bottom:.75rem; }
+    .cta-banner p { color:rgba(10,22,40,.7); margin-bottom:2rem; font-size:1rem; }
+    .cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-dark {
+      background: var(--navy); color:#fff;
+      font-weight:700; padding:.85rem 2rem; border-radius:8px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+      transition: background .2s;
+    }
+    .btn-dark:hover { background: var(--steel); }
+    .btn-wa-dark {
+      background: var(--green); color:#fff;
+      font-weight:700; padding:.85rem 2rem; border-radius:8px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+      transition: opacity .2s;
+    }
+    .btn-wa-dark:hover { opacity:.9; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 3px solid var(--gold);
+      padding:3rem 2rem 1.5rem;
+    }
+    .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+    .footer-brand .sem-badge-lg {
+      width:52px; height:52px; background:var(--gold); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.2rem;
+      color:var(--navy); margin-bottom:1rem;
+    }
+    .footer-brand h3 { font-family:'Barlow Condensed',sans-serif; font-weight:800; color:#fff; font-size:1.2rem; margin-bottom:.5rem; }
+    .footer-brand p { font-size:.83rem; color:var(--gray); line-height:1.65; max-width:280px; }
+    .footer-col h4 { font-weight:700; color:#fff; margin-bottom:1rem; font-size:.9rem; text-transform:uppercase; letter-spacing:.5px; }
+    .footer-col a, .footer-col p {
+      display:block; color:var(--gray); font-size:.83rem;
+      text-decoration:none; margin-bottom:.5rem; line-height:1.5;
+      transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      max-width:1200px; margin:0 auto;
+      border-top:1px solid rgba(255,255,255,.07);
+      padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center;
+      font-size:.78rem; color:var(--gray);
+      flex-wrap:wrap; gap:.5rem;
+    }
+    .footer-bottom a { color:var(--gray); text-decoration:none; }
+    .footer-bottom a:hover { color:var(--gold-light); }
+
+    /* ── SUCCESS MSG ── */
+    .form-success {
+      display:none; text-align:center; padding:1.5rem;
+      color: var(--gold-light); font-weight:600;
+    }
+
+    @media(max-width:900px){
+      .hero-inner { grid-template-columns:1fr; }
+      .services-grid { grid-template-columns:1fr 1fr; }
+      .why-grid { grid-template-columns:1fr; }
+      .products-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-inner { grid-template-columns:1fr 1fr; }
+      .stats-inner { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:600px){
+      .services-grid { grid-template-columns:1fr; }
+      .products-grid { grid-template-columns:1fr 1fr; }
+      .footer-inner { grid-template-columns:1fr; }
+      .hero-btns { flex-direction:column; }
+      .cta-btns { flex-direction:column; align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="sem-badge">SEM</div>
+    <span>Stephen Engineering<small>Mandiri</small></span>
+  </a>
+  <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" class="active">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="jasa-pks.html">Jasa PKS</a>
+    <a href="katalog-spareparts.html">Spare Parts</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="kontak.html" class="nav-cta">📋 Minta Penawaran</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">⚙️ Balikpapan · Kalimantan Timur</span>
+      <h1>Solusi Teknik <span class="accent">PKS & Industri</span> Terpercaya Sejak 2018</h1>
+      <p>Electrical Contractor, Supplier Spare Parts Mesin Kelapa Sawit, Governor Woodward, Steam Turbine, dan Panel Kontrol Listrik untuk seluruh PKS di Kalimantan.</p>
+      <div class="hero-btns">
+        <a href="katalog-spareparts.html" class="btn-primary">🔩 Lihat Katalog Produk</a>
+        <a href="jasa-pks.html" class="btn-outline">🛠 Layanan Kami</a>
+      </div>
+    </div>
+
+    <!-- INLINE RFQ -->
+    <div class="hero-rfq">
+      <h3>📋 Permintaan Penawaran Cepat</h3>
+      <p>Isi form di bawah, kami hubungi dalam 1×24 jam</p>
+      <form class="rfq-form" id="rfqHero" onsubmit="submitRFQ(event,'rfqHero')">
+        <input type="text" name="nama" placeholder="Nama Anda / Perusahaan" required/>
+        <input type="tel" name="hp" placeholder="No. WhatsApp / HP" required/>
+        <select name="kebutuhan" required>
+          <option value="" disabled selected>— Pilih Kebutuhan —</option>
+          <option>Spare Parts PKS</option>
+          <option>Governor Woodward Service</option>
+          <option>Panel Kontrol Listrik</option>
+          <option>Steam Turbine Service</option>
+          <option>Electrical Contractor</option>
+          <option>Lainnya</option>
+        </select>
+        <textarea name="detail" placeholder="Deskripsi singkat kebutuhan Anda…"></textarea>
+        <button type="submit" class="rfq-submit">📤 Kirim Permintaan Penawaran</button>
+        <p class="rfq-or">— atau hubungi langsung —</p>
+        <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20ingin%20menanyakan%20harga%20spare%20parts%20PKS." class="rfq-wa" target="_blank">
+          💬 WhatsApp: 0813-7829-3498
+        </a>
+        <div class="form-success" id="rfqHero-success">✅ Terima kasih! Tim kami akan menghubungi Anda segera.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">2018</div><div class="stat-label">Berdiri Sejak</div></div>
+    <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Tahun Pengalaman</div></div>
+    <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Produk Tersedia</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Kepuasan Klien</div></div>
+  </div>
+</div>
+
+<!-- LAYANAN UTAMA -->
+<section style="background:#fff;">
+  <div class="container">
+    <span class="section-tag">Layanan Unggulan</span>
+    <h2 class="section-title">Apa yang Kami Kerjakan</h2>
+    <p class="section-sub">Solusi lengkap untuk kebutuhan teknik dan supply spare parts industri pabrik kelapa sawit Anda.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Jasa Teknik PKS</h3>
+        <p>Perakitan panel kontrol listrik, service maintenance, troubleshooting, instalasi electrical & mechanical untuk industri PKS.</p>
+        <a href="jasa-pks.html" class="service-link">Selengkapnya →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔩</div>
+        <h3>Supplier Spare Parts</h3>
+        <p>Suplai spare parts Governor Woodward, Screw Press, Digester, Steam Turbine Shinko, Boiler Parts, dan ribuan komponen PKS lainnya.</p>
+        <a href="katalog-spareparts.html" class="service-link">Lihat Katalog →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏭</div>
+        <h3>Electrical Contractor</h3>
+        <p>Desain, instalasi, dan pembuatan panel listrik: MSB, MCC Panel, Sinkron Panel, AMF & ATS Panel untuk seluruh kebutuhan industri.</p>
+        <a href="jasa-pks.html" class="service-link">Selengkapnya →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK HIGHLIGHT -->
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <span class="section-tag">Produk Unggulan</span>
+    <h2 class="section-title">Spare Parts yang Sering Dicari</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="prod-icon">⚙️</div>
+        <h4>Governor Woodward</h4>
+        <p>UG8, UG10, UG40, UG25+, SG, PSG, PGD — Service & Spare Parts</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🔧</div>
+        <h4>Screw Press Parts</h4>
+        <p>Cone Guide, Worm Screw, Press Cage, Strainer Plate, Drive Shaft</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🌀</div>
+        <h4>Steam Turbine</h4>
+        <p>Shinko RB4, RB5, RB8, DNG 41-55 — Service Kit & Spare Parts</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🔌</div>
+        <h4>Panel Listrik</h4>
+        <p>MSB, MCC Panel, Sinkron Panel, AMF/ATS, Kapasitor Bank</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🏗</div>
+        <h4>Digester Parts</h4>
+        <p>Long Arm, Short Arm, Expeller Arm, V-Block, Bottom Plate</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🔗</div>
+        <h4>Chain & Sprocket</h4>
+        <p>Conveyor Chain, Roller Chain Hitachi/Senqcia, Chain Coupling</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🔴</div>
+        <h4>Boiler Parts</h4>
+        <p>Fire Grate, Frame Door, Multicyclone, Refractory Batu Api SK</p>
+      </div>
+      <div class="product-card">
+        <div class="prod-icon">🔹</div>
+        <h4>Valve & Fitting</h4>
+        <p>Globe, Gate, Ball, Butterfly Valve — Cast Iron & Stainless Steel</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="katalog-spareparts.html" class="btn-primary">📦 Lihat Semua Katalog</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="container">
+    <span class="section-tag" style="color:var(--gold-light)">Keunggulan Kami</span>
+    <h2 class="section-title">Mengapa Memilih CV. Stephen Engineering Mandiri?</h2>
+    <div class="why-grid" style="margin-top:2.5rem;">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div>
+          <h4>SDM Berpengalaman di Industri PKS</h4>
+          <p>Tim kami terdiri dari tenaga ahli berpengalaman di bidang teknik mechanical dan electrical khusus industri kelapa sawit Kalimantan.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div>
+          <h4>Harga Kompetitif & Kualitas Terjamin</h4>
+          <p>Kami berkomitmen memberikan produk berkualitas tinggi dengan harga terbaik dan kompetitif tanpa mengorbankan kualitas.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div>
+          <h4>Stok Lengkap, Pengiriman Cepat</h4>
+          <p>Ribuan spare parts tersedia di gudang kami di Balikpapan, siap dikirim ke seluruh pabrik kelapa sawit di Kalimantan.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div>
+          <h4>Layanan Purna Jual Prima</h4>
+          <p>Dukungan teknis dan after-sales service yang responsif — kepuasan pelanggan adalah prioritas utama kami.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Butuh Spare Parts atau Jasa Teknik Sekarang?</h2>
+    <p>Hubungi kami untuk mendapatkan penawaran terbaik. Respons cepat, harga kompetitif.</p>
+    <div class="cta-btns">
+      <a href="kontak.html" class="btn-dark">📋 Formulir RFQ Lengkap</a>
+      <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20membutuhkan%20spare%20parts%20PKS." target="_blank" class="btn-wa-dark">💬 Chat WhatsApp Sekarang</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="sem-badge-lg">SEM</div>
+      <h3>CV. Stephen Engineering Mandiri</h3>
+      <p>Electrical Contractor, Supplier Spare Parts Electrical & Mechanical Palm Oil Mill, dan General Technical Supplier of Industrial. Balikpapan, Kalimantan Timur.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Halaman</h4>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="jasa-pks.html">Jasa Teknik PKS</a>
+      <a href="katalog-spareparts.html">Katalog Spare Parts</a>
+      <a href="kontak.html">Hubungi Kami</a>
+      <a href="panduan.html">Panduan Admin</a>
+    </div>
+    <div class="footer-col">
+      <h4>Produk Utama</h4>
+      <p>Governor Woodward</p>
+      <p>Screw Press Parts</p>
+      <p>Steam Turbine Shinko</p>
+      <p>Panel Kontrol Listrik</p>
+      <p>Digester Parts</p>
+      <p>Chain & Sprocket</p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <p>📍 Jl. Besakih IV Blok BE No.12, Sepinggan, Balikpapan 76114</p>
+      <p>📞 (0542) 8702210</p>
+      <a href="https://wa.me/6281378293498" target="_blank">💬 0813-7829-3498</a>
+      <a href="https://wa.me/6281341562420" target="_blank">💬 0813-4156-2420</a>
+      <a href="mailto:cv.stephen.em78@gmail.com">✉️ cv.stephen.em78@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 CV. Stephen Engineering Mandiri. All rights reserved.</span>
+    <span>Designed for Lead Generation · <a href="panduan.html">Panduan Admin</a></span>
+  </div>
+</footer>
+
+<script>
+function submitRFQ(e, formId) {
+  e.preventDefault();
+  const form = document.getElementById(formId);
+  const data = new FormData(form);
+  const nama = data.get('nama') || '';
+  const hp = data.get('hp') || '';
+  const kebutuhan = data.get('kebutuhan') || '';
+  const detail = data.get('detail') || '';
+
+  // Send to Make.com webhook (replace URL below with your actual webhook)
+  const WEBHOOK_URL = 'https://hook.eu1.make.com/YOUR_WEBHOOK_ID';
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ nama, hp, kebutuhan, detail, halaman: window.location.pathname, waktu: new Date().toLocaleString('id-ID') })
+  }).catch(()=>{}); // silent fail if webhook not set
+
+  // WhatsApp redirect
+  const msg = encodeURIComponent(`Halo CV. Stephen Engineering Mandiri,\n\nSaya *${nama}* ingin menanyakan:\n*${kebutuhan}*\n\n${detail}\n\nNo. HP saya: ${hp}`);
+  window.open(`https://wa.me/6281378293498?text=${msg}`, '_blank');
+
+  form.style.display = 'none';
+  const s = document.getElementById(formId+'-success');
+  if(s) s.style.display = 'block';
+}
+</script>
+</body>
+</html>

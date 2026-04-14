@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Katalog Spare Parts PKS – Governor Woodward, Screw Press, Boiler | CV. SEM Balikpapan</title>
+  <meta name="description" content="Supplier Spare Parts PKS Balikpapan. Jual Governor Woodward, Suku Cadang Screw Press, Digester, Steam Turbine Shinko, Chain Sprocket, Valve & Fitting."/>
+  <meta name="keywords" content="Supplier Spare Parts PKS Balikpapan, Jual Governor Woodward PKS, Suku Cadang Screw Press, Digester Parts, Steam Turbine Shinko"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#0a1628;--navy-light:#122040;--steel:#1e3a5f;--gold:#c8960c;--gold-light:#f0b429;--white:#f8f9fa;--gray:#8a9ab0;--gray-light:#e8ecf2;--green:#1a7a4a;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
+    .nav-logo .sem-badge{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:var(--navy);}
+    .nav-logo span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;line-height:1.2;}
+    .nav-logo small{display:block;font-size:.65rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}
+    .nav-links{display:flex;gap:.25rem;align-items:center;}
+    .nav-links a{color:var(--gray);text-decoration:none;font-size:.82rem;font-weight:500;padding:.4rem .75rem;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap;}
+    .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+    .nav-links a.active{color:var(--gold-light);}
+    .nav-cta{background:var(--gold);color:var(--navy)!important;font-weight:700!important;border-radius:6px!important;padding:.45rem 1rem!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:#fff;}
+    @media(max-width:860px){.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy-light);flex-direction:column;padding:1rem;border-bottom:2px solid var(--gold);}.nav-links.open{display:flex;}.hamburger{display:flex;}}
+
+    .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--steel) 100%);padding:8rem 2rem 5rem;text-align:center;}
+    .page-hero .breadcrumb{color:var(--gray);font-size:.82rem;margin-bottom:1rem;}
+    .page-hero .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fff;margin-bottom:.75rem;}
+    .page-hero p{color:var(--gray);font-size:1rem;max-width:580px;margin:0 auto;}
+
+    /* FILTER TABS */
+    .filter-bar{background:#fff;border-bottom:1px solid var(--gray-light);position:sticky;top:64px;z-index:10;padding:.75rem 2rem;}
+    .filter-inner{max-width:1100px;margin:0 auto;display:flex;gap:.5rem;flex-wrap:wrap;overflow-x:auto;}
+    .filter-btn{background:transparent;border:1.5px solid var(--gray-light);color:#5a6a80;font-family:inherit;font-size:.8rem;font-weight:600;padding:.4rem 1rem;border-radius:20px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+    .filter-btn:hover,.filter-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+
+    section{padding:4rem 2rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-tag{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:block;}
+    .section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--navy);line-height:1.1;margin-bottom:.5rem;}
+
+    /* CATEGORY BLOCK */
+    .cat-block{margin-bottom:4rem;}
+    .cat-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;padding-bottom:1rem;border-bottom:2px solid var(--gray-light);}
+    .cat-icon{font-size:2rem;}
+    .cat-header h2{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:800;color:var(--navy);}
+    .cat-header p{font-size:.85rem;color:#5a6a80;margin-top:.2rem;}
+
+    .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+    .prod-card{border:1px solid var(--gray-light);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;transition:transform .2s,box-shadow .2s,border-color .2s;}
+    .prod-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,.08);border-color:var(--gold);}
+    .prod-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--navy);}
+    .prod-items{display:flex;flex-direction:column;gap:.3rem;}
+    .prod-item{font-size:.8rem;color:#5a6a80;padding:.2rem 0;border-bottom:1px solid rgba(0,0,0,.04);}
+    .prod-item:last-child{border:none;}
+    .prod-wa{display:flex;align-items:center;justify-content:center;gap:.4rem;background:var(--green);color:#fff;font-size:.8rem;font-weight:600;padding:.55rem .85rem;border-radius:7px;text-decoration:none;margin-top:auto;transition:opacity .2s;}
+    .prod-wa:hover{opacity:.85;}
+    .prod-rfq{display:flex;align-items:center;justify-content:center;gap:.4rem;background:transparent;border:1.5px solid var(--gold);color:var(--gold);font-size:.8rem;font-weight:600;padding:.55rem .85rem;border-radius:7px;text-decoration:none;transition:background .2s,color .2s;cursor:pointer;font-family:inherit;}
+    .prod-rfq:hover{background:var(--gold);color:var(--navy);}
+    .prod-btns{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+
+    /* QUICK RFQ MODAL */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
+    .modal-overlay.open{display:flex;}
+    .modal{background:#fff;border-radius:16px;padding:2rem;max-width:480px;width:100%;position:relative;}
+    .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#5a6a80;}
+    .modal h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.5rem;}
+    .modal p{font-size:.85rem;color:#5a6a80;margin-bottom:1.25rem;}
+    .modal-form{display:flex;flex-direction:column;gap:.75rem;}
+    .modal-form input,.modal-form textarea{border:1.5px solid var(--gray-light);border-radius:8px;padding:.7rem 1rem;font-family:inherit;font-size:.88rem;color:var(--navy);width:100%;}
+    .modal-form input:focus,.modal-form textarea:focus{outline:none;border-color:var(--gold);}
+    .modal-form textarea{min-height:80px;resize:vertical;}
+    .modal-submit{background:var(--gold);color:var(--navy);font-weight:700;padding:.8rem;border-radius:8px;border:none;cursor:pointer;font-family:inherit;font-size:.95rem;width:100%;}
+    .modal-submit:hover{opacity:.9;}
+
+    .cta-banner{background:linear-gradient(135deg,var(--gold) 0%,#e8a80a 100%);padding:4rem 2rem;text-align:center;}
+    .cta-banner h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--navy);margin-bottom:.75rem;}
+    .cta-banner p{color:rgba(10,22,40,.7);margin-bottom:2rem;}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-dark{background:var(--navy);color:#fff;font-weight:700;padding:.85rem 2rem;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;}
+    .btn-dark:hover{background:var(--steel);}
+    .btn-wa-dark{background:var(--green);color:#fff;font-weight:700;padding:.85rem 2rem;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;}
+
+    footer{background:var(--navy);border-top:3px solid var(--gold);padding:3rem 2rem 1.5rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;}
+    .footer-brand .sem-badge-lg{width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:1rem;}
+    .footer-brand h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;color:#fff;font-size:1.2rem;margin-bottom:.5rem;}
+    .footer-brand p{font-size:.83rem;color:var(--gray);line-height:1.65;max-width:280px;}
+    .footer-col h4{font-weight:700;color:#fff;margin-bottom:1rem;font-size:.9rem;text-transform:uppercase;}
+    .footer-col a,.footer-col p{display:block;color:var(--gray);font-size:.83rem;text-decoration:none;margin-bottom:.5rem;line-height:1.5;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:.78rem;color:var(--gray);flex-wrap:wrap;gap:.5rem;}
+    @media(max-width:900px){.prod-grid{grid-template-columns:repeat(2,1fr);}.footer-inner{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.prod-grid{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}.cta-btns{flex-direction:column;align-items:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="sem-badge">SEM</div>
+    <span>Stephen Engineering<small>Mandiri</small></span>
+  </a>
+  <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="jasa-pks.html">Jasa PKS</a>
+    <a href="katalog-spareparts.html" class="active">Spare Parts</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="kontak.html" class="nav-cta">📋 Minta Penawaran</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="breadcrumb"><a href="index.html">Beranda</a> / Katalog Spare Parts</p>
+  <h1>Katalog Spare Parts PKS</h1>
+  <p>Supplier spare parts lengkap untuk industri pabrik kelapa sawit. Setiap produk tersedia tombol tanya harga via WhatsApp.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="filterCat('all',this)">Semua Produk</button>
+    <button class="filter-btn" onclick="filterCat('governor',this)">⚙️ Governor Woodward</button>
+    <button class="filter-btn" onclick="filterCat('screw',this)">🔧 Screw Press</button>
+    <button class="filter-btn" onclick="filterCat('digester',this)">🏗 Digester</button>
+    <button class="filter-btn" onclick="filterCat('turbine',this)">🌀 Steam Turbine</button>
+    <button class="filter-btn" onclick="filterCat('boiler',this)">🔴 Boiler Parts</button>
+    <button class="filter-btn" onclick="filterCat('chain',this)">🔗 Chain & Sprocket</button>
+    <button class="filter-btn" onclick="filterCat('valve',this)">🔵 Valve & Fitting</button>
+    <button class="filter-btn" onclick="filterCat('electrical',this)">⚡ Electrical</button>
+    <button class="filter-btn" onclick="filterCat('lainnya',this)">🔹 Lainnya</button>
+  </div>
+</div>
+
+<section style="background:#fff;">
+<div class="container">
+
+  <!-- GOVERNOR -->
+  <div class="cat-block" data-cat="governor">
+    <div class="cat-header">
+      <span class="cat-icon">⚙️</span>
+      <div><h2>Governor Woodward</h2><p>Service, kalibrasi, dan spare parts semua tipe Governor Woodward untuk PKS</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Governor UG Series</h4>
+        <div class="prod-items">
+          <span class="prod-item">UG-8 Governor</span>
+          <span class="prod-item">UG-10 Governor</span>
+          <span class="prod-item">UG-40 Governor</span>
+          <span class="prod-item">UG-25+ Governor</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Governor UG Series (UG-8, UG-10, UG-40, UG-25+)')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20menanyakan%20harga%20Governor%20UG%20Series." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Governor SG / PSG / PGD</h4>
+        <div class="prod-items">
+          <span class="prod-item">SG Governor</span>
+          <span class="prod-item">PSG Governor</span>
+          <span class="prod-item">PGD Governor</span>
+          <span class="prod-item">PG PL Governor</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Governor SG/PSG/PGD')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20menanyakan%20harga%20Governor%20SG%20PSG." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Governor TG / Service Kit</h4>
+        <div class="prod-items">
+          <span class="prod-item">TG-13 Governor</span>
+          <span class="prod-item">TG-17 Governor</span>
+          <span class="prod-item">Service Kit Kalibrasi</span>
+          <span class="prod-item">Spare Parts Governor</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Governor TG13/TG17 & Service Kit')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20menanyakan%20harga%20Governor%20TG." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREW PRESS -->
+  <div class="cat-block" data-cat="screw">
+    <div class="cat-header">
+      <span class="cat-icon">🔧</span>
+      <div><h2>Screw Press Spare Parts</h2><p>Semua kapasitas dan merek — CBI, Wang Yuen, Universal Steel, GS, MSB, Apindo</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Screw Press CBI</h4>
+        <div class="prod-items">
+          <span class="prod-item">CBi P-20T Segmented</span>
+          <span class="prod-item">CBi P-20T 2nd Generation</span>
+          <span class="prod-item">CBi P-15T</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Screw Press CBI Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20harga%20Screw%20Press%20CBI." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Screw Press Wang Yuen / GS</h4>
+        <div class="prod-items">
+          <span class="prod-item">WY P-20T & P-15T</span>
+          <span class="prod-item">GS P-25T & P-15T MK</span>
+          <span class="prod-item">MSB P-15T · Tuner P-15T</span>
+          <span class="prod-item">Apindo AP P-17T</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Screw Press Wang Yuen/GS Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Screw%20Press%20WY%20GS." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Komponen Screw Press</h4>
+        <div class="prod-items">
+          <span class="prod-item">Cone Guide · Adjusting Cone</span>
+          <span class="prod-item">Worm Screw · Press Cage</span>
+          <span class="prod-item">Strainer Plate · Spur Gear</span>
+          <span class="prod-item">Drive Shaft LH/RH · Wear Pipe</span>
+          <span class="prod-item">Worm Lengthening Shaft</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Komponen Screw Press')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20komponen%20Screw%20Press." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIGESTER -->
+  <div class="cat-block" data-cat="digester">
+    <div class="cat-header">
+      <span class="cat-icon">🏗</span>
+      <div><h2>Digester Spare Parts</h2><p>Semua kapasitas — US 3500L, US 5000L, CB 5000L, GS 5000L, Wang Yuen</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Digester Arms</h4>
+        <div class="prod-items">
+          <span class="prod-item">Long Arm Digester</span>
+          <span class="prod-item">Short Arm Digester</span>
+          <span class="prod-item">Expeller Arm Digester</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Digester Arms (Long/Short/Expeller)')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Digester%20Arms." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Digester Body Parts</h4>
+        <div class="prod-items">
+          <span class="prod-item">V-Block Digester</span>
+          <span class="prod-item">Bottom Plate Digester</span>
+          <span class="prod-item">Coupling Press</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Digester Body Parts (V-Block, Bottom Plate)')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Digester%20Body%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEAM TURBINE -->
+  <div class="cat-block" data-cat="turbine">
+    <div class="cat-header">
+      <span class="cat-icon">🌀</span>
+      <div><h2>Steam Turbine Spare Parts</h2><p>Shinko RB4, RB5, RB8, DNG 41-55 dan merek lainnya</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Shinko RB Series</h4>
+        <div class="prod-items">
+          <span class="prod-item">Shinko RB4 Service Kit</span>
+          <span class="prod-item">Shinko RB5 Service Kit</span>
+          <span class="prod-item">Shinko RB8 Service Kit</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Steam Turbine Shinko RB Series')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Shinko%20RB%20Spare%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Shinko DNG & Lainnya</h4>
+        <div class="prod-items">
+          <span class="prod-item">Shinko DNG 41-55</span>
+          <span class="prod-item">Dresser Rand Parts</span>
+          <span class="prod-item">Elliot / Murray / Nadrowsky</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Steam Turbine DNG & Lainnya')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Steam%20Turbine%20DNG." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Service Kit & Komponen</h4>
+        <div class="prod-items">
+          <span class="prod-item">Bush · HL Guide Plug</span>
+          <span class="prod-item">Stem · SD Seal</span>
+          <span class="prod-item">Gasket Set Turbine</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Steam Turbine Service Kit & Komponen')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Steam%20Turbine%20Service%20Kit." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOILER -->
+  <div class="cat-block" data-cat="boiler">
+    <div class="cat-header">
+      <span class="cat-icon">🔴</span>
+      <div><h2>Boiler & Refractory Parts</h2><p>Takuma, Atmindo, Mechmar, Vickers — Frame Door, Fire Grate, Refractory</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Boiler Parts</h4>
+        <div class="prod-items">
+          <span class="prod-item">Frame Door Boiler</span>
+          <span class="prod-item">Fire Grate</span>
+          <span class="prod-item">Multicyclone Dust Collector</span>
+          <span class="prod-item">Cone Dust Collector</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Boiler Parts (Frame Door, Fire Grate, Multicyclone)')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Boiler%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Refractory Needs</h4>
+        <div class="prod-items">
+          <span class="prod-item">Batu Api SK-30, SK-32, SK-34</span>
+          <span class="prod-item">Batu Api SK-36, SK-38</span>
+          <span class="prod-item">Semen Api Mortar SK-34, SK-36</span>
+          <span class="prod-item">Semen Castable C-13 s/d C-16</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Refractory (Batu Api, Semen Castable)')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Refractory%20Batu%20Api." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAIN -->
+  <div class="cat-block" data-cat="chain">
+    <div class="cat-header">
+      <span class="cat-icon">🔗</span>
+      <div><h2>Chain, Sprocket & Coupling</h2><p>Hitachi/Senqcia/Zexus, KCM Japan — Conveyor Chain & Roller Chain</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Conveyor Chain PKS</h4>
+        <div class="prod-items">
+          <span class="prod-item">Chain Sprocket 6" dan 4"</span>
+          <span class="prod-item">Hollow Pitch Chain 6" dan 4"</span>
+          <span class="prod-item">MAX Conveyor Chain PKS</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Conveyor Chain PKS')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Conveyor%20Chain." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Roller Chain (Hitachi/Senqcia)</h4>
+        <div class="prod-items">
+          <span class="prod-item">RS25 s/d RS240 — Simplex/Duplex/Triplex</span>
+          <span class="prod-item">Chain Coupling KC-3012 s/d KC-12018</span>
+          <span class="prod-item">Flexible Coupling FCL100–FCL560</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Roller Chain & Chain Coupling')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Roller%20Chain." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALVE -->
+  <div class="cat-block" data-cat="valve">
+    <div class="cat-header">
+      <span class="cat-icon">🔵</span>
+      <div><h2>Valve, Fitting & Hydrocyclone</h2><p>Cast Iron, Carbon Steel, Stainless Steel, Forging Steel</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Valve Products</h4>
+        <div class="prod-items">
+          <span class="prod-item">Globe Valve · Gate Valve</span>
+          <span class="prod-item">Ball Valve · Butterfly Valve</span>
+          <span class="prod-item">Swing Check Valve</span>
+          <span class="prod-item">Pressure Gauge · Thermometer</span>
+          <span class="prod-item">Reflex Glass Klinger</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Valve Products')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Valve%20Products." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Fitting & Mechanical Seal</h4>
+        <div class="prod-items">
+          <span class="prod-item">Elbow · Reducer · Tee · Socket · Flange</span>
+          <span class="prod-item">Material: Galvanish, Carbon, SS, PVC</span>
+          <span class="prod-item">Mechanical Seal Kew/Sihi/Warman Pump</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Fitting & Mechanical Seal')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Fitting%20dan%20Mechanical%20Seal." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Hydrocyclone Parts</h4>
+        <div class="prod-items">
+          <span class="prod-item">Dome Hydrocyclone</span>
+          <span class="prod-item">Cone Hydrocyclone</span>
+          <span class="prod-item">Ring Hydrocyclone</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Hydrocyclone Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Hydrocyclone%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELECTRICAL -->
+  <div class="cat-block" data-cat="electrical">
+    <div class="cat-header">
+      <span class="cat-icon">⚡</span>
+      <div><h2>Komponen Electrical</h2><p>ABB, Schneider, Mitsubishi, Fuji, Siemens, dan merek terpercaya lainnya</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Breaker & Contactor</h4>
+        <div class="prod-items">
+          <span class="prod-item">ACB · MCB · MCCB · Autobreaker</span>
+          <span class="prod-item">Contactor Magnetic</span>
+          <span class="prod-item">Thermal Overload Relay</span>
+          <span class="prod-item">Current Transformer</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Breaker & Contactor Electrical')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Electrical%20Breaker." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Alat Kontrol & Panel Meter</h4>
+        <div class="prod-items">
+          <span class="prod-item">Over Current Relay · Synchronizer</span>
+          <span class="prod-item">Ampere Meter · Volt Meter</span>
+          <span class="prod-item">Capacitor Bank · Relay Omron/Schneider</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Alat Kontrol & Panel Meter')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Panel%20Meter." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Kabel & Lampu Industri</h4>
+        <div class="prod-items">
+          <span class="prod-item">Cable Supreme, Kabelindo, Jembo, Eterna</span>
+          <span class="prod-item">Push Button · Pilot Lamp · Sirine</span>
+          <span class="prod-item">Lampu Sorot HPIT · Rotary Lamp</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Kabel & Lampu Industri')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Kabel%20dan%20Lampu." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAINNYA -->
+  <div class="cat-block" data-cat="lainnya">
+    <div class="cat-header">
+      <span class="cat-icon">🔹</span>
+      <div><h2>Produk Lainnya</h2><p>Fruit Cage Parts, Vibrating Screen, Conveyor Parts</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <h4>Fruit Cage (Lory) Parts</h4>
+        <div class="prod-items">
+          <span class="prod-item">Lory Wheel · Block Bearing · Lory Shaft</span>
+          <span class="prod-item">Railko Bushing · Novotek Bushing</span>
+          <span class="prod-item">Bronze Bushing · Bollard · Roller NPD</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Fruit Cage Lory Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Fruit%20Cage%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Vibrating Screen AMKCO/SWECO</h4>
+        <div class="prod-items">
+          <span class="prod-item">Wire Mesh Screen Mesh 10, 20, 30, 40</span>
+          <span class="prod-item">New Screen AMKCO & SWECO</span>
+          <span class="prod-item">Spare Parts Vibrating Screen</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Vibrating Screen AMKCO/SWECO Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Vibrating%20Screen." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <h4>Conveyor Parts</h4>
+        <div class="prod-items">
+          <span class="prod-item">Hanger Bearing · U-Bolt</span>
+          <span class="prod-item">Ripple Plate · Rotor Bar · Square Rod</span>
+          <span class="prod-item">Sterilizer Door Packing · Channel Gasket</span>
+        </div>
+        <div class="prod-btns">
+          <button class="prod-rfq" onclick="openModal('Conveyor Parts')">📋 Tanya Harga</button>
+          <a href="https://wa.me/6281378293498?text=Halo%2C%20saya%20menanyakan%20Conveyor%20Parts." target="_blank" class="prod-wa">💬 WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- MODAL TANYA HARGA -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>📋 Tanya Harga</h3>
+    <p id="modal-product-name">Produk: -</p>
+    <form class="modal-form" id="modalForm" onsubmit="submitModal(event)">
+      <input type="hidden" id="modal-prod" name="produk"/>
+      <input type="text" name="nama" placeholder="Nama / Perusahaan Anda" required/>
+      <input type="tel" name="hp" placeholder="No. WhatsApp" required/>
+      <textarea name="detail" placeholder="Kuantitas, spesifikasi, atau catatan tambahan…"></textarea>
+      <button type="submit" class="modal-submit">💬 Kirim via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Produk Tidak Ada di Katalog?</h2>
+    <p>Kami menerima permintaan khusus. Hubungi kami dan kami akan bantu sourcing spare parts kebutuhan Anda.</p>
+    <div class="cta-btns">
+      <a href="kontak.html" class="btn-dark">📋 RFQ Lengkap</a>
+      <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20membutuhkan%20spare%20parts%20khusus." target="_blank" class="btn-wa-dark">💬 WhatsApp Sekarang</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="sem-badge-lg">SEM</div><h3>CV. Stephen Engineering Mandiri</h3><p>Supplier Spare Parts PKS terlengkap di Balikpapan, Kalimantan Timur.</p></div>
+    <div class="footer-col"><h4>Halaman</h4><a href="index.html">Beranda</a><a href="tentang.html">Tentang Kami</a><a href="jasa-pks.html">Jasa Teknik PKS</a><a href="katalog-spareparts.html">Katalog Spare Parts</a><a href="kontak.html">Hubungi Kami</a></div>
+    <div class="footer-col"><h4>Kategori</h4><p>Governor Woodward</p><p>Screw Press Parts</p><p>Steam Turbine</p><p>Boiler Parts</p><p>Chain & Sprocket</p></div>
+    <div class="footer-col"><h4>Kontak</h4><p>📍 Jl. Besakih IV BE No.12, Balikpapan</p><a href="https://wa.me/6281378293498" target="_blank">💬 0813-7829-3498</a><a href="mailto:cv.stephen.em78@gmail.com">✉️ cv.stephen.em78@gmail.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 CV. Stephen Engineering Mandiri.</span><a href="panduan.html">Panduan Admin</a></div>
+</footer>
+
+<script>
+function filterCat(cat, btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.cat-block').forEach(b=>{
+    if(cat==='all'||b.dataset.cat===cat){ b.style.display='block'; }
+    else { b.style.display='none'; }
+  });
+}
+function openModal(prodName){
+  document.getElementById('modal-product-name').textContent='Produk: '+prodName;
+  document.getElementById('modal-prod').value=prodName;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); }
+document.getElementById('modalOverlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
+function submitModal(e){
+  e.preventDefault();
+  const f=document.getElementById('modalForm');
+  const d=new FormData(f);
+  const nama=d.get('nama')||'';
+  const hp=d.get('hp')||'';
+  const produk=d.get('produk')||'';
+  const detail=d.get('detail')||'';
+  const WEBHOOK='https://hook.eu1.make.com/YOUR_WEBHOOK_ID';
+  fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nama,hp,produk,detail,halaman:'katalog',waktu:new Date().toLocaleString('id-ID')})}).catch(()=>{});
+  const msg=encodeURIComponent(`Halo CV. Stephen Engineering Mandiri,\n\nSaya *${nama}* ingin menanyakan harga:\n*${produk}*\n\n${detail}\n\nNo. HP saya: ${hp}`);
+  window.open(`https://wa.me/6281378293498?text=${msg}`,'_blank');
+  closeModal();
+  f.reset();
+}
+</script>
+</body>
+</html>

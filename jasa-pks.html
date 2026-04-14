@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jasa Teknik PKS – Servis Mesin Sawit, Panel Listrik Balikpapan | CV. SEM</title>
+  <meta name="description" content="Jasa servis mesin sawit, instalasi panel PKS, overhaul Governor Woodward, perawatan Screw Press. CV. Stephen Engineering Mandiri Balikpapan."/>
+  <meta name="keywords" content="Jasa Servis Mesin Sawit, Instalasi Panel PKS, Overhaul Governor Woodward, Perawatan Screw Press, Electrical Contractor Balikpapan"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#0a1628;--navy-light:#122040;--steel:#1e3a5f;--gold:#c8960c;--gold-light:#f0b429;--white:#f8f9fa;--gray:#8a9ab0;--gray-light:#e8ecf2;--green:#1a7a4a;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
+    .nav-logo .sem-badge{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:var(--navy);}
+    .nav-logo span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;line-height:1.2;}
+    .nav-logo small{display:block;font-size:.65rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}
+    .nav-links{display:flex;gap:.25rem;align-items:center;}
+    .nav-links a{color:var(--gray);text-decoration:none;font-size:.82rem;font-weight:500;padding:.4rem .75rem;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap;}
+    .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+    .nav-links a.active{color:var(--gold-light);}
+    .nav-cta{background:var(--gold);color:var(--navy)!important;font-weight:700!important;border-radius:6px!important;padding:.45rem 1rem!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:#fff;}
+    @media(max-width:860px){.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy-light);flex-direction:column;padding:1rem;border-bottom:2px solid var(--gold);}.nav-links.open{display:flex;}.hamburger{display:flex;}}
+
+    .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--steel) 100%);padding:8rem 2rem 5rem;text-align:center;}
+    .page-hero .breadcrumb{color:var(--gray);font-size:.82rem;margin-bottom:1rem;}
+    .page-hero .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fff;margin-bottom:.75rem;}
+    .page-hero p{color:var(--gray);font-size:1rem;max-width:560px;margin:0 auto;}
+
+    section{padding:5rem 2rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-tag{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:block;}
+    .section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--navy);line-height:1.1;margin-bottom:1rem;}
+    .section-sub{font-size:1rem;color:#5a6a80;line-height:1.7;margin-bottom:3rem;}
+
+    /* JASA CARDS */
+    .jasa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+    .jasa-card{border:1px solid var(--gray-light);border-radius:14px;padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s;}
+    .jasa-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.09);border-color:var(--gold);}
+    .jasa-icon{font-size:2.5rem;flex-shrink:0;}
+    .jasa-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;}
+    .jasa-card p{font-size:.87rem;color:#5a6a80;line-height:1.65;margin-bottom:1rem;}
+    .jasa-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+    .tag{background:var(--gray-light);color:var(--navy);font-size:.72rem;font-weight:600;padding:.25rem .65rem;border-radius:20px;}
+    .jasa-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.83rem;font-weight:600;color:var(--gold);text-decoration:none;margin-top:.85rem;transition:gap .2s;}
+    .jasa-cta:hover{gap:.7rem;}
+
+    /* PANEL SECTION */
+    .panel-section{background:var(--navy);}
+    .panel-section .section-title{color:#fff;}
+    .panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+    .panel-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:1.5rem;}
+    .panel-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--gold-light);margin-bottom:.5rem;}
+    .panel-card p{font-size:.82rem;color:var(--gray);line-height:1.6;}
+
+    /* RFQ JASA */
+    .rfq-section{background:var(--gray-light);}
+    .rfq-container{max-width:700px;margin:0 auto;background:#fff;border-radius:16px;padding:2.5rem;box-shadow:0 8px 32px rgba(0,0,0,.06);}
+    .rfq-container h2{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:800;color:var(--navy);margin-bottom:.5rem;}
+    .rfq-container p{font-size:.9rem;color:#5a6a80;margin-bottom:1.75rem;}
+    .rfq-form{display:flex;flex-direction:column;gap:.85rem;}
+    .rfq-form input,.rfq-form select,.rfq-form textarea{border:1.5px solid var(--gray-light);border-radius:8px;padding:.75rem 1rem;font-family:inherit;font-size:.9rem;color:var(--navy);background:#fff;transition:border-color .2s;width:100%;}
+    .rfq-form input:focus,.rfq-form select:focus,.rfq-form textarea:focus{outline:none;border-color:var(--gold);}
+    .rfq-form textarea{min-height:100px;resize:vertical;}
+    .rfq-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+    .rfq-submit{background:var(--gold);color:var(--navy);font-weight:700;font-size:1rem;padding:.9rem;border-radius:8px;border:none;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;}
+    .rfq-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,150,12,.35);}
+    .rfq-or{text-align:center;color:#8a9ab0;font-size:.82rem;margin:.25rem 0;}
+    .rfq-wa{display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--green);color:#fff;font-weight:600;font-size:.9rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:opacity .2s;}
+    .rfq-wa:hover{opacity:.85;}
+    .form-success{display:none;text-align:center;padding:2rem;color:var(--green);font-weight:600;font-size:1.1rem;}
+
+    .cta-banner{background:linear-gradient(135deg,var(--gold) 0%,#e8a80a 100%);padding:4rem 2rem;text-align:center;}
+    .cta-banner h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--navy);margin-bottom:.75rem;}
+    .cta-banner p{color:rgba(10,22,40,.7);margin-bottom:2rem;}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-dark{background:var(--navy);color:#fff;font-weight:700;padding:.85rem 2rem;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;}
+    .btn-dark:hover{background:var(--steel);}
+    .btn-wa-dark{background:var(--green);color:#fff;font-weight:700;padding:.85rem 2rem;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;}
+
+    footer{background:var(--navy);border-top:3px solid var(--gold);padding:3rem 2rem 1.5rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;}
+    .footer-brand .sem-badge-lg{width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:1rem;}
+    .footer-brand h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;color:#fff;font-size:1.2rem;margin-bottom:.5rem;}
+    .footer-brand p{font-size:.83rem;color:var(--gray);line-height:1.65;max-width:280px;}
+    .footer-col h4{font-weight:700;color:#fff;margin-bottom:1rem;font-size:.9rem;text-transform:uppercase;}
+    .footer-col a,.footer-col p{display:block;color:var(--gray);font-size:.83rem;text-decoration:none;margin-bottom:.5rem;line-height:1.5;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:.78rem;color:var(--gray);flex-wrap:wrap;gap:.5rem;}
+    .footer-bottom a{color:var(--gray);text-decoration:none;}
+    @media(max-width:900px){.jasa-grid{grid-template-columns:1fr;}.panel-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.panel-grid,.rfq-row{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}.cta-btns{flex-direction:column;align-items:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="sem-badge">SEM</div>
+    <span>Stephen Engineering<small>Mandiri</small></span>
+  </a>
+  <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="jasa-pks.html" class="active">Jasa PKS</a>
+    <a href="katalog-spareparts.html">Spare Parts</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="kontak.html" class="nav-cta">📋 Minta Penawaran</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="breadcrumb"><a href="index.html">Beranda</a> / Jasa Teknik PKS</p>
+  <h1>Jasa Teknik PKS & Electrical Contractor</h1>
+  <p>Solusi lengkap servis, instalasi, dan maintenance mesin-mesin Pabrik Kelapa Sawit di Kalimantan.</p>
+</div>
+
+<!-- JASA UTAMA -->
+<section style="background:#fff;">
+  <div class="container">
+    <span class="section-tag">Layanan Teknik</span>
+    <h2 class="section-title">Layanan Jasa Kami</h2>
+    <p class="section-sub">Didukung tenaga ahli berpengalaman di industri PKS dengan standar kualitas tinggi dan ketepatan waktu penyelesaian.</p>
+    <div class="jasa-grid">
+
+      <div class="jasa-card">
+        <div class="jasa-icon">⚡</div>
+        <div>
+          <h3>Perakitan & Pembuatan Panel Kontrol Listrik</h3>
+          <p>Fabrikasi panel listrik segala jenis untuk kebutuhan mesin dan peralatan hydraulic system di Industri PKS. Dari desain hingga instalasi lengkap.</p>
+          <div class="jasa-tags">
+            <span class="tag">MSB Panel</span><span class="tag">MCC Panel</span><span class="tag">Sinkron Panel</span><span class="tag">AMF & ATS</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+      <div class="jasa-card">
+        <div class="jasa-icon">🔧</div>
+        <div>
+          <h3>Service Maintenance & Troubleshooting</h3>
+          <p>Service maintenance Panel Kontrol Listrik, troubleshooting elektrikal, dan perbaikan sistem kelistrikan industri PKS secara cepat dan terukur.</p>
+          <div class="jasa-tags">
+            <span class="tag">Panel Listrik</span><span class="tag">Motor Listrik</span><span class="tag">Gearbox</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+      <div class="jasa-card">
+        <div class="jasa-icon">🌀</div>
+        <div>
+          <h3>Steam Turbine Service</h3>
+          <p>Service dan perbaikan Steam Turbine Shinko RB4, RB5, RB8, Shinko DNG 41-55, Dresser Rand, Elliot, Murray, Nadrowsky. Termasuk supply spare parts.</p>
+          <div class="jasa-tags">
+            <span class="tag">Shinko RB4</span><span class="tag">Shinko RB5</span><span class="tag">DNG 41-55</span><span class="tag">Dresser Rand</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+      <div class="jasa-card">
+        <div class="jasa-icon">⚙️</div>
+        <div>
+          <h3>Governor Woodward Service & Kalibrasi</h3>
+          <p>Overhaul, service, dan kalibrasi Governor Woodward semua tipe. Spare parts original tersedia untuk seluruh model governor yang digunakan PKS.</p>
+          <div class="jasa-tags">
+            <span class="tag">UG-8</span><span class="tag">UG-10</span><span class="tag">UG-40</span><span class="tag">UG-25+</span><span class="tag">SG/PSG</span><span class="tag">PGD</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+      <div class="jasa-card">
+        <div class="jasa-icon">🏭</div>
+        <div>
+          <h3>Water Tube Boiler Service</h3>
+          <p>Jasa perbaikan Water Tube Boiler berbagai merek: Takuma, Atmindo, Boiler Mech, Vickers, Mechmar, Fraser, Indomarine. Termasuk refractory installation.</p>
+          <div class="jasa-tags">
+            <span class="tag">Takuma</span><span class="tag">Atmindo</span><span class="tag">Mechmar</span><span class="tag">Refractory</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+      <div class="jasa-card">
+        <div class="jasa-icon">🔌</div>
+        <div>
+          <h3>Motor Listrik & Gear Motor/Gearbox</h3>
+          <p>Rewinding, balancing, dan service motor listrik. Overhaul gear motor dan gearbox untuk seluruh stasiun PKS. Generator Set (Genset) service tersedia.</p>
+          <div class="jasa-tags">
+            <span class="tag">Motor Listrik</span><span class="tag">Gear Motor</span><span class="tag">Gearbox</span><span class="tag">Genset</span>
+          </div>
+          <a href="#rfq" class="jasa-cta">Minta Penawaran →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PANEL LISTRIK -->
+<section class="panel-section">
+  <div class="container">
+    <span class="section-tag" style="color:var(--gold-light)">Panel Listrik Industri</span>
+    <h2 class="section-title">Jenis Panel yang Kami Fabrikasi</h2>
+    <div class="panel-grid" style="margin-top:2rem;">
+      <div class="panel-card"><h4>Main Switch Board (LVMSB)</h4><p>Panel distribusi utama untuk sinkronisasi Steam Turbine Generator dan Diesel Generator Set.</p></div>
+      <div class="panel-card"><h4>Synchrone Panel</h4><p>Panel sinkron untuk paralel generator, memastikan distribusi beban yang optimal.</p></div>
+      <div class="panel-card"><h4>AMF & ATS Panel</h4><p>Automatic Main Failure dan Automatic Transfer Switch untuk backup power otomatis.</p></div>
+      <div class="panel-card"><h4>Capacitor Bank Panel</h4><p>Panel perbaikan faktor daya (Power Factor Correction) untuk efisiensi energi pabrik.</p></div>
+      <div class="panel-card"><h4>MCC Panel (Motor Control Center)</h4><p>Kontrol motor elektrik Fan Blower, Geared Motor, Oil Pump, Water Pump seluruh stasiun PKS.</p></div>
+      <div class="panel-card"><h4>DOL, S/D, A/T, Soft Starter & Inverter</h4><p>Semua jenis panel starting motor, termasuk Variable Frequency Drive (Inverter).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RFQ FORM -->
+<section class="rfq-section" id="rfq">
+  <div class="container">
+    <div class="rfq-container">
+      <h2>📋 Minta Penawaran Jasa</h2>
+      <p>Isi form di bawah ini, tim teknis kami akan menghubungi Anda dalam 1×24 jam kerja.</p>
+      <form class="rfq-form" id="rfqJasa" onsubmit="submitRFQ(event,'rfqJasa')">
+        <div class="rfq-row">
+          <input type="text" name="nama" placeholder="Nama / Perusahaan" required/>
+          <input type="tel" name="hp" placeholder="No. WhatsApp" required/>
+        </div>
+        <input type="text" name="lokasi" placeholder="Lokasi PKS / Pabrik"/>
+        <select name="jasa" required>
+          <option value="" disabled selected>— Pilih Jenis Jasa —</option>
+          <option>Panel Kontrol Listrik</option>
+          <option>Governor Woodward Service & Kalibrasi</option>
+          <option>Steam Turbine Service</option>
+          <option>Water Tube Boiler Service</option>
+          <option>Motor Listrik / Gearbox</option>
+          <option>Electrical Contractor (Instalasi)</option>
+          <option>Lainnya</option>
+        </select>
+        <select name="urgensi">
+          <option value="" disabled selected>— Tingkat Urgensi —</option>
+          <option>URGENT – Butuh segera (dalam 24 jam)</option>
+          <option>Segera – dalam 1 minggu</option>
+          <option>Reguler – dalam 1 bulan</option>
+          <option>Perencanaan – lebih dari 1 bulan</option>
+        </select>
+        <textarea name="detail" placeholder="Deskripsikan kebutuhan teknis Anda secara singkat…"></textarea>
+        <button type="submit" class="rfq-submit">📤 Kirim Permintaan Penawaran Jasa</button>
+        <p class="rfq-or">— atau hubungi langsung —</p>
+        <a href="https://wa.me/6281378293498?text=Halo%20SEM%2C%20saya%20membutuhkan%20jasa%20teknik%20PKS." target="_blank" class="rfq-wa">💬 Chat WhatsApp: 0813-7829-3498</a>
+        <div class="form-success" id="rfqJasa-success">✅ Permintaan terkirim! Tim kami akan menghubungi Anda segera.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Lihat Katalog Spare Parts Kami</h2>
+    <p>Ribuan spare parts PKS tersedia — Governor, Screw Press, Steam Turbine, dan lebih banyak lagi.</p>
+    <div class="cta-btns">
+      <a href="katalog-spareparts.html" class="btn-dark">🔩 Lihat Katalog</a>
+      <a href="https://wa.me/6281378293498" target="_blank" class="btn-wa-dark">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="sem-badge-lg">SEM</div><h3>CV. Stephen Engineering Mandiri</h3><p>Electrical Contractor, Supplier Spare Parts PKS. Balikpapan, Kalimantan Timur.</p></div>
+    <div class="footer-col"><h4>Halaman</h4><a href="index.html">Beranda</a><a href="tentang.html">Tentang Kami</a><a href="jasa-pks.html">Jasa Teknik PKS</a><a href="katalog-spareparts.html">Katalog Spare Parts</a><a href="kontak.html">Hubungi Kami</a></div>
+    <div class="footer-col"><h4>Jasa Unggulan</h4><p>Governor Woodward</p><p>Panel Kontrol Listrik</p><p>Steam Turbine Service</p><p>Water Tube Boiler</p></div>
+    <div class="footer-col"><h4>Kontak</h4><p>📍 Jl. Besakih IV BE No.12, Balikpapan</p><a href="https://wa.me/6281378293498" target="_blank">💬 0813-7829-3498</a><a href="mailto:cv.stephen.em78@gmail.com">✉️ cv.stephen.em78@gmail.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 CV. Stephen Engineering Mandiri.</span><a href="panduan.html">Panduan Admin</a></div>
+</footer>
+
+<script>
+function submitRFQ(e,formId){
+  e.preventDefault();
+  const form=document.getElementById(formId);
+  const data=new FormData(form);
+  const obj={};
+  data.forEach((v,k)=>obj[k]=v);
+  obj.halaman=window.location.pathname;
+  obj.waktu=new Date().toLocaleString('id-ID');
+  const WEBHOOK='https://hook.eu1.make.com/YOUR_WEBHOOK_ID';
+  fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(obj)}).catch(()=>{});
+  const msg=encodeURIComponent(`Halo CV. Stephen Engineering Mandiri,\n\nSaya *${obj.nama||''}* dari perusahaan, membutuhkan:\n*${obj.jasa||''}*\nUrgensi: ${obj.urgensi||'-'}\nLokasi: ${obj.lokasi||'-'}\n\nDetail: ${obj.detail||'-'}\n\nNo. HP: ${obj.hp||''}`);
+  window.open(`https://wa.me/6281378293498?text=${msg}`,'_blank');
+  form.style.display='none';
+  const s=document.getElementById(formId+'-success');
+  if(s)s.style.display='block';
+}
+</script>
+</body>
+</html>
